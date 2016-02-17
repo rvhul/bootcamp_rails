@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  get 'home/index'
-  get 'contact' => 'home#contact'
+  get 'home/index', as: :landing
+  get 'contact' => 'home#contact', as: :contact
+  get 'privacy' => 'home#privacy', as: :privacy
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
