@@ -18,7 +18,7 @@
     text-align: center;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   }
-
+  
   .form button:hover,
   .form button:active,
   .form button:focus {
@@ -39,8 +39,8 @@
     -webkit-transition: all 0.3 ease;
     transition: all 0.3 ease;
     cursor: pointer;
-&:hover {
-background-color: #264348;
-}
+    &:hover {
+      background-color: #264348;
+    }
   }
 }

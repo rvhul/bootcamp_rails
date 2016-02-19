@@ -1,26 +1,27 @@
 body {
-margin: 0;
-padding: 0;
+  margin: 0;
+  padding: 0;
 }
 .vcenter {
-position: relative;
-top: 50%;
-transform: translateY(-50%);
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
+
 nav {
-background-color: #9D2933;
-text-align: center;
-height: 10vh;
-padding-top: 2.3em;
+  background-color: #9D2933;
+  text-align: center;
+  height: 10vh;
+  padding-top: 2.3em;
 }
 
 a {
-color: #333333;
-font-size: 1.3em;
-&:hover{
-text-decoration: none;
-color: #264348;
-}
+  color: #333333;
+  font-size: 1.3em;
+  &:hover{
+    text-decoration: none;
+    color: #264348;
+  }
 }
 
 $primary-bg-color: #C91F37;
