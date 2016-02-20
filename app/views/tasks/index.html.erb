@@ -1,11 +1,11 @@
 <div id="task">
   <div class="vcenter">
-    <h1>you got these tasks to do yo</h1>
-    <ul>
+    <h1 class="animated zoomInDown">you got these tasks to do yo</h1>
+    <ul class="animated zoomInDown">
       <% @tasks.each do |task| %>
-      <li><%= task.title %></li>
+      <li class="animated zoomInDown"><%= task.title %></li>
       <% end %>
     </ul>
-    <%= link_to "New Task", new_task_path , class: "btn btn-primary" %>
+    <%= link_to "New Task", new_task_path , class: "btn btn-primary animated zoomInDown" %>
   </div>
 </div>

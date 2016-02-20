@@ -23,9 +23,11 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params)
     if @task.save
-      flash[:success] = "Successfully added task"
+      flash[:success] = "Successfully added task."
       redirect_to tasks_path
     else
+      flash.now[:error] = "You didn't inlcude a title, please do."
+      render :new
     end
   end
 
