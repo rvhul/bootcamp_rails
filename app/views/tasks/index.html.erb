@@ -1,3 +1,11 @@
-<div class="container">
-  <h1>Tasks yo</h1>
+<div id="task">
+  <div class="vcenter">
+    <h1>you got these tasks to do yo</h1>
+    <ul>
+      <% Task.all.each do |task| %>
+      <li><%= task.title %></li>
+      <% end %>
+    </ul>
+    <%= link_to "New Task", new_task_path , class: "btn btn-primary" %>
+  </div>
 </div>
