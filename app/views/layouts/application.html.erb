@@ -12,6 +12,10 @@
 
   <%= render partial: 'common/navheader' unless controller_name == "home" && action_name == "index" %>
 
+  <% if flash[:success] %>
+    <div class="alert alert-success" role="alert"><%= flash[:success] %></div>
+  <% end %>
+
   <%= yield %>
 
 </body>

@@ -38,6 +38,9 @@ GEM
       tzinfo (~> 1.1)
     animate-rails (1.0.9)
       rails
+    annotate (2.7.0)
+      activerecord (>= 3.2, < 6.0)
+      rake (~> 10.4)
     arel (6.0.3)
     autoprefixer-rails (6.3.3)
       execjs
@@ -151,6 +154,7 @@ PLATFORMS
 
 DEPENDENCIES
   animate-rails
+  annotate
   bootstrap-sass
   byebug
   coffee-rails (~> 4.1.0)

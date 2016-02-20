@@ -2,7 +2,7 @@
   <div class="vcenter">
     <h1>you got these tasks to do yo</h1>
     <ul>
-      <% Task.all.each do |task| %>
+      <% @tasks.each do |task| %>
       <li><%= task.title %></li>
       <% end %>
     </ul>
