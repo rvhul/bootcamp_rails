@@ -1,14 +1,16 @@
 <div id="new_task">
   <div class="vcenter">
-<h1 class="animated zoomInUp">add a new task yo</h1>
-<%= form_for @task do |f| %>
-  <%= f.label :title, class:"animated zoomInDown"%>
-  <%= f.text_field :title, class:"animated zoomInDown" %>
-  <br>
-  <%= f.label :description, class:"animated zoomInDown" %>
-  <%= f.text_area :description, class:"animated zoomInDown   " %>
-  <br>
-  <%= f.submit class:"btn btn-primary animated zoomInDown"  %>
-<% end %>
+    <h1 class="animated zoomInUp">
+      add a new task yo
+    </h1>
+    <%= form_for @task do |f| %>
+      <%= f.label :title, class:"animated zoomInDown"%>
+      <%= f.text_field :title, class:"animated zoomInDown" %>
+    <br>
+      <%= f.label :description, class:"animated zoomInDown" %>
+      <%= f.text_area :description, class:"animated zoomInDown   " %>
+    <br>
+      <%= f.submit class:"btn btn-primary animated zoomInDown"  %>
+    <% end %>
   </div>
 </div>
