@@ -18,7 +18,7 @@
     text-align: center;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   }
-  
+
   .form button:hover,
   .form button:active,
   .form button:focus {
@@ -43,4 +43,18 @@
       background-color: #264348;
     }
   }
+
+  @mixin box_sizing	{
+  		-moz-box-sizing:				border-box;
+  		-webkit-box-sizing:	border-box;
+  		box-sizing:									border-box;
+  }
+  .debug_dump	{
+  		clear:	both;
+  		float:	left;
+  		width:	100%;
+  		margin-top:	45px;
+  		@include	box_sizing;
+  }
+
 }
