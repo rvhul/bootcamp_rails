@@ -1,8 +1,8 @@
 <div id="users">
 <h1>
   <%= gravatar_for @user %>
-  <%= @user.name %>
+  <i><%= @user.name %></i>
 </h1>
-<%=	@user.name %>,	<%=	@user.email	%>
+<strong>User: '<%=	@user.name %>'<br>Email:	'<%= @user.email	%>'</strong>
 <% provide(:title, @user.name) %>
 </div>
