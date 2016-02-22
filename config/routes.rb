@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'privacy' => 'home#privacy', as: :privacy
   post 'contact' => 'home#test', as: :contacts
   resources :tasks, except: [:show]
+  resources :users
 
 
   # The priority is based upon order of creation: first created -> highest priority.
