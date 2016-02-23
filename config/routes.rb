@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
+
   get 'home/index', as: :landing
   get 'contact' => 'home#contact', as: :contact
   get 'privacy' => 'home#privacy', as: :privacy
   get 'signup' => 'users#new', as: :signup
+  get	'login'			=>	'sessions#new'
+  post 'login'			=>	'sessions#create'
+  delete 'logout'		=>	'sessions#destroy'
   resources :tasks, except: [:show]
   resources :users
 
