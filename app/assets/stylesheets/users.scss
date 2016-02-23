@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #users {
   background-color: $primary-bg-color;
-  height: 100vh;
+  min-height: 100vh;
   border: 1px solid transparent;
   text-align: center;
   box-sizing: border-box;
