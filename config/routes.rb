@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  get 'users/new'
+  # get 'users/new'
 
   get 'home/index', as: :landing
   get 'contact' => 'home#contact', as: :contact
   get 'privacy' => 'home#privacy', as: :privacy
-  post 'contact' => 'home#test', as: :contacts
+  get 'signup' => 'users#new', as: :signup
   resources :tasks, except: [:show]
   resources :users
 
