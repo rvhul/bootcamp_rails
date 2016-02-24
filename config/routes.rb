@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'contact' => 'home#contact', as: :contact
   get 'privacy' => 'home#privacy', as: :privacy
   get 'signup' => 'users#new', as: :signup
-  get	'login'			=>	'sessions#new'
+  get	'login'			=>	'sessions#new', as: :login
   post 'login'			=>	'sessions#create'
   delete 'logout'		=>	'sessions#destroy'
   resources :tasks, except: [:show]
