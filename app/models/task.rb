@@ -17,5 +17,17 @@ class Task < ActiveRecord::Base
     COMPLETED = 2
   end
 
+
+  def not_started?
+    self.status == StatusTask::NOT_STARTED
+  end
+
+  def started?
+    self.status == StatusTask::STARTED
+  end
+
+  def completed?
+    self.status == StatusTask::COMPLETED
+  end
   validates :title, presence: true
 end

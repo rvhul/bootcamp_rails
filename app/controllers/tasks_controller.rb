@@ -13,7 +13,9 @@
 class TasksController < ApplicationController
 
   def index
-    @tasks = Task.all
+    @not_started_tasks = Task.where(status: Task::StatusTask::NOT_STARTED)
+    @started_tasks = Task.where(status: Task::StatusTask::STARTED)
+    @finished_tasks = Task.where(status: Task::StatusTask::COMPLETED)
   end
 
   def new
@@ -31,7 +33,13 @@ class TasksController < ApplicationController
     end
   end
 
-private
+  def update
+    @task = Task.find(params[:id])
+    @task.update_attribute(:status, params[:status].to_i)
+    redirect_to tasks_path
+  end
+
+  private
   def task_params
     params.require(:task).permit(:title, :description)
   end

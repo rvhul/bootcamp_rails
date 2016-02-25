@@ -1,15 +1,17 @@
+
 <div id="task">
-  <div class="vcenter">
-    <h1 class="animated zoomInDown">
-      you got these tasks to do yo\
-    </h1>
-    <ul class="animated zoomInDown">
-      <% @tasks.each do |task| %>
-      <li class="animated zoomInDown">
-        <%= task.title %>
-      </li>
-      <% end %>
-    </ul>
-    <%= link_to "New Task", new_task_path , class: "btn btn-primary animated zoomInDown" %>
-  </div>
+  <h1>Tasks</h1>
+  <h2>Not Started</h2>
+  <ul>
+    <%= render @not_started_tasks %>
+  </ul>
+
+  <h2>In Progress</h2>
+  <ul>
+    <%= render @started_tasks %>
+  </ul>
+  <h2>Finished</h2>
+  <ul>
+    <%= render @finished_tasks %>
+  </ul>
 </div>
