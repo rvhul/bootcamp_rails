@@ -2,8 +2,8 @@
   <div class="container">
     <h1>Current Users</h1>
     <% @user.each do |user| %>
-    <%= gravatar_for user %>
-    <%= user.name %> -- <%= user.email %><br>
+    <br><%= gravatar_for user %><br>
+    <br><span id="username"><%= user.name %></span> | <span id="email"><%= user.email %></span><br>
     <% end %>
   </div>
 </div>

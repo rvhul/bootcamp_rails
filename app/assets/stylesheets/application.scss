@@ -14,12 +14,14 @@
 		-webkit-box-sizing:	border-box;
 		box-sizing:									border-box;
 }
+
 .debug_dump	{
 		clear:	both;
 		float:	left;
 		width:	100%;
-		margin-top:	45px;
+		height: 100%;
 		@include	box_sizing;
+		background-color: lighten($primary-bg-color, 8%);
 }
 
 // input,	textarea,	select,	.uneditable-input		{

@@ -7,4 +7,32 @@
   border: 1px solid transparent;
   text-align: center;
   box-sizing: border-box;
+  font-family: 'Arapey', serif;
+  font-size: 1.3em;
+  .container {
+    span  {
+      &#username {
+        font-size: 1.2em;
+      }
+      &#email {
+        font-style: italic;
+      }
+    }
+  }
+  .btn-primary {
+    text-transform: uppercase;
+    outline: 0;
+    background: #C91F37;
+    width: 30%;
+    border: 0;
+    padding: 15px;
+    color: black;
+    font-size: 1em;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    &:hover {
+      background-color: #264348;
+    }
+  }
 }
