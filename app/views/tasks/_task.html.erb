@@ -1,11 +1,14 @@
-<li>
+<li id="task_<%= task.id %>">
   <%= task.title %>
   (
-<%= link_to("Start", task_path(task, status: Task::StatusTask::STARTED), method: :patch)  if task.not_started? %>
-<%= link_to("Shelf", task_path(task, status: Task::StatusTask::NOT_STARTED), method: :patch) if task.started? %>
-<%= content_tag "span" %>
-<%= link_to("Finished", task_path(task, status: Task::StatusTask::COMPLETED), method: :patch) if task.started? %>
-<%= link_to("Back To Work", task_path(task, status: Task::StatusTask::STARTED), method: :patch) if task.completed? %>
-)
+  <%= link_to("Start", task_path(task, status: Task::StatusTask::STARTED), method: :patch, remote: true)  if task.not_started? %>
 
+  <%= link_to("Finished", task_path(task, status: Task::StatusTask::COMPLETED), method: :patch, remote: true) if task.started? %>
+
+  <%= content_tag(:span, "|") if task.started? %>
+
+  <%= link_to("Shelf", task_path(task, status: Task::StatusTask::NOT_STARTED), method: :patch, remote: true) if task.started? %>
+
+  <%= link_to("Back To Work", task_path(task, status: Task::StatusTask::STARTED), method: :patch, remote: true) if task.completed? %>
+  )
 </li>
