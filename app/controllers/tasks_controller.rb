@@ -13,9 +13,9 @@
 class TasksController < ApplicationController
 
   def index
-    @not_started_tasks = Task.where(status: Task::StatusTask::NOT_STARTED)
-    @started_tasks = Task.where(status: Task::StatusTask::STARTED)
-    @finished_tasks = Task.where(status: Task::StatusTask::COMPLETED)
+    @not_started_tasks = return_current_user.tasks.where(status: Task::StatusTask::NOT_STARTED)
+    @started_tasks = return_current_user.tasks.where(status: Task::StatusTask::STARTED)
+    @finished_tasks = return_current_user.tasks.where(status: Task::StatusTask::COMPLETED)
   end
 
   def new
@@ -23,7 +23,8 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(task_params)
+    current_user = return_current_user
+    @task = current_user.tasks.new(task_params)
     if @task.save
       flash[:success] = "Successfully added task."
       redirect_to tasks_path

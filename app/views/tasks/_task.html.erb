@@ -1,4 +1,4 @@
-<li id="task_<%= task.id %>">
+<li id="task_<%= dom_id(task) %>">
   <%= task.title %>
   (
   <%= link_to("Start", task_path(task, status: Task::StatusTask::STARTED), method: :patch, remote: true)  if task.not_started? %>

@@ -17,6 +17,7 @@ class Task < ActiveRecord::Base
     COMPLETED = 2
   end
 
+  belongs_to :user
 
   def not_started?
     self.status == StatusTask::NOT_STARTED

@@ -3,14 +3,9 @@
     <h1 class="animated zoomInUp">
       add a new task yo
     </h1>
-    <%= form_for @task do |f| %>
-      <%= f.label :title, class:"animated zoomInDown"%>
-      <%= f.text_field :title, class:"animated zoomInDown" %>
-    <br>
-      <%= f.label :description, class:"animated zoomInDown" %>
-      <%= f.text_area :description, class:"animated zoomInDown   " %>
-    <br>
-      <%= f.submit class:"btn btn-primary animated zoomInDown"  %>
+    <%= simple_form_for @task do |t| %>
+    <%= t.input :title, placeholder: "Enter your task" %>
+    <%= t.submit "Add Task", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
